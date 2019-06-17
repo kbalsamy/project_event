@@ -1,0 +1,15 @@
+<h1>Events Calender </h1>
+{% for event in events %}
+
+<div>
+	
+	<h2> <a href="{% url 'event_detail' event.id %}">{{ event.name }}</a>
+		<span><a href="#">book now </a></span>
+	</h2>
+	<h3>{{ event.locationAt }} on {{ event.eventOn }}</h3>
+	<p> {{ event.description }} </p>
+
+
+</div>
+
+{% endfor %}
